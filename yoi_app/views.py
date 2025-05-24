@@ -1,0 +1,28 @@
+from django.shortcuts import render
+
+from yoi_app.model import Post
+
+
+def index(request):
+    posts = [
+        Post(
+            title='자기소개',
+            content='안녕하세요 저는 QA 엔지니어로 근무하고 있는 박수연입니다. '
+                    'QA 엔지니어로서 저는 단순히 오류를 찾는 것을 넘어, 개발자와 협업하여 근본적인 원인을 분석하고,  사용자들의 경험을 개선시키는 것을 좋아합니다.'
+                    '컴퓨터정보통신공학전공에서 배운 논리적 사고와 시스템적 접근 방식은 복잡한 문제를 체계적으로 분석하고 효과적으로 해결하는데 큰 도움이 되고 있습니다.'
+                    '앞으로도 기술적 전문성과 꼼꼼함을 바탕으로, 더 나은 소프트웨어 품질을 위해 끊임없이 노력하는 QA 엔지니어가 되겠습니다.'
+
+        ),
+        Post(
+            title='사용 기술',
+            content='Figma, Selenium, Python, Jira, Confluence'
+        ),
+        Post(
+            title='관심분야',
+            content='리그레션테스트를 진행하면서 시간과 비용이 반복적으로 소요되어 자동화에 대한 필요성을 느끼게 되었고, 테스트 자동화 분야에 관심을 가지게 되었습니다.'
+                    '더불어 개발자들과의 소통이 중요하다는 것을 깨닫고 프로그래밍에도 관심을 가지게 되었습니다.'
+
+        )
+    ]
+
+    return render(request, 'index.html', {'posts': posts})
