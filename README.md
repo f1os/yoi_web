@@ -3,7 +3,7 @@ Python
 - Python 3.12
 ---
 
-## 실행
+# 실행
 ### 필수 패키지 설치
 ```
 pip install -r requirements.txt
