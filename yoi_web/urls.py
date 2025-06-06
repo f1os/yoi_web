@@ -19,5 +19,5 @@ from django.urls import path
 from yoi_app.views import index
 
 urlpatterns = [
-    path('test/', index)
+    path('', index)
 ]
